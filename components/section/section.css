@@ -1,0 +1,43 @@
+section {
+  width: 100%;
+  display: flex;
+}
+
+.section__content {
+  width: 100%;
+  margin: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.section__badge {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--secondary-color);
+  border: 1.8px solid var(--secondary-color);
+  padding: 8px 15px;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.section__header {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  width: 50%;
+}
+
+
+
+@media (max-width: 768px) {
+  .section__content {
+    margin: 20px 30px;
+  }
+
+  .section__header {
+    font-size: 29px;
+    width: 100%;
+  }
+}

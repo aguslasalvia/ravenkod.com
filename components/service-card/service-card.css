@@ -1,0 +1,40 @@
+.service-card {
+  position: relative;
+  background: #14151a;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--secondary-color);
+  border-left: 2px solid var(--secondary-color);
+}
+
+.service-card__number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 13px;
+  color: var(--secondary-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.service-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 16px 0 8px;
+}
+
+.service-card__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--primary-darker-color);
+}

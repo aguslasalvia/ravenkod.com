@@ -1,0 +1,70 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid rgba(200, 162, 74, .12);
+  padding: 28px 48px 24px;
+}
+
+.footer__frieze {
+  position: relative;
+  width: min(620px, 70%);
+  height: 22px;
+  margin: 0 auto 20px;
+  background-image: linear-gradient(rgba(200, 162, 74, .25), rgba(200, 162, 74, .25));
+  background-size: 100% 1px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__frieze-rune {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-color);
+  padding: 0 14px;
+  color: var(--secondary-color);
+  font-size: 15px;
+  letter-spacing: 6px;
+  white-space: nowrap;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.footer__brand-icon {
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.footer__brand-name {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.footer__brand-tagline {
+  color: var(--primary-darker-color);
+  font-size: 14px;
+}
+
+.footer__meta {
+  text-align: right;
+  font-size: 12px;
+  color: var(--primary-darker-color);
+  line-height: 1.7;
+}
+
+.footer__meta p:last-child {
+  color: var(--secondary-darker-color);
+}

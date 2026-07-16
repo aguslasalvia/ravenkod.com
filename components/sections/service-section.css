@@ -1,0 +1,12 @@
+.service-section__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-section__grid>article:last-child {
+  background-color: #14130f;
+  border:1px solid rgba(200,162,74,.3);
+  
+}
