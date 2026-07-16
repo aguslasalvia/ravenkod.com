@@ -1,3 +1,5 @@
+import Hamburguer from "../hamburguer/hamburguer"
+
 import "./navbar.css"
 
 export default function Navbar() {
@@ -11,6 +13,7 @@ export default function Navbar() {
         <li><a href="/#team">Equipo</a></li>
         <li><a className="navbar__contact-btn" href="/#contact">Agenda llamada</a></li>
       </ul>
+      <Hamburguer />
     </nav>
   )
 }
