@@ -29,7 +29,7 @@ export default function ProcessSection() {
   return (
     <Section
       id="process"
-      badge="Proceso"
+      badge="PROCESO"
       header="De la idea al producto"
       subheader="// de la niebla a la piedra"
     >

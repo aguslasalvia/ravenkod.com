@@ -1,0 +1,35 @@
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1180px;
+}
+
+.guild-card {
+  border: 1px dashed rgba(200, 162, 74, .35);
+  border-radius: 22px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 34px 30px;
+  gap: 14px;
+}
+
+.guild-card__rune {
+  font-size: 26px;
+  color: rgba(200, 162, 74, .5);
+}
+
+.guild-card__title {
+  font: 700 20px/1.25 'Archivo', sans-serif;
+  color: #e8e6e1;
+  margin: 0;
+}
+
+.guild-card__text {
+  font: 400 14px/1.6 'Archivo', sans-serif;
+  color: #9c9b98;
+  margin: 0;
+}

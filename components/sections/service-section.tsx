@@ -25,7 +25,7 @@ export default function ServiceSection() {
   return (
     <Section
       id="services"
-      badge="Servicios"
+      badge="SERVICIOS"
       header="Un solo equipo para todo tu software."
     >
       <div className="service-section__grid">
