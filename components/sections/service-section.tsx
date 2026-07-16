@@ -24,6 +24,7 @@ const serviceOptions = [
 export default function ServiceSection() {
   return (
     <Section
+      id="services"
       badge="Servicios"
       header="Un solo equipo para todo tu software."
     >

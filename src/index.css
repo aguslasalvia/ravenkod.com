@@ -42,5 +42,11 @@ body {
   height: 100dvh;
   width: 100%;
   background-color: var(--bg-color);
-  max-width: 1300px;
+
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

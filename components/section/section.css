@@ -1,14 +1,17 @@
 section {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .section__content {
   width: 100%;
-  margin: 30px 40px;
+  margin: 150px 40px;
   display: flex;
   flex-direction: column;
-  gap: 15px
+  justify-content: center;
+  gap: 15px;
+  max-width: 1300px;
 }
 
 .section__badge {
@@ -29,6 +32,14 @@ section {
   width: 50%;
 }
 
+
+.section__subheader {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--secondary-darker-color);
+  width: 50%;
+}
 
 
 @media (max-width: 768px) {

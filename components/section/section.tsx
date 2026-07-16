@@ -1,6 +1,7 @@
 import './section.css'
 
 interface SectionProps {
+  id?: string,
   children: React.ReactNode
   badge?: string,
   header?: string,
@@ -9,7 +10,7 @@ interface SectionProps {
 
 export default function Section(props: SectionProps) {
   return (
-    <section>
+    <section id={props.id}>
       <div className="section__content">
         <div>
           {props.badge && <span className="section__badge">{props.badge}</span>}

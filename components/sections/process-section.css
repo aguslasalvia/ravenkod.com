@@ -1,0 +1,28 @@
+#process {
+  background-color: #0b0c0f;
+}
+
+.process-section__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+
+.process-section__grid article:first-child {
+  border-radius: 18px 0 0 18px;
+}
+
+.process-section__grid article:last-child {
+  border-radius: 0 18px 18px 0;
+}
+
+@media (max-width: 768px) {
+  .process-section__grid article:first-child {
+    border-radius: 18px 18px 0 0;
+  }
+
+  .process-section__grid article:last-child {
+    border-radius: 0 0 18px 18px;
+  }
+}

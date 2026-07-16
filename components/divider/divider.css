@@ -1,3 +1,9 @@
+.divider__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .divider {
   display: flex;
   justify-content: center;
@@ -10,6 +16,7 @@
   background-size: 100% 1px, 32px 11px;
   background-position: center, center;
   background-repeat: no-repeat, repeat-x;
+  max-width: 1700px;
 }
 
 .divider__marker {

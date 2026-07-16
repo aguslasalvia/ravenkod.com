@@ -4,6 +4,13 @@
   border: 1px solid rgba(255, 255, 255, .08);
   border-radius: 14px;
   padding: 28px;
+  transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.service-card:hover {
+  box-shadow: 0 .5px 5px var(--secondary-color);
+
+  transform: translateY(-4px);
 }
 
 .service-card::before {
@@ -30,11 +37,12 @@
   font-size: 20px;
   font-weight: 700;
   color: var(--primary-color);
-  margin: 16px 0 8px;
+  margin: 26px 0 8px;
 }
 
 .service-card__text {
   font-size: 14px;
   line-height: 1.6;
   color: var(--primary-darker-color);
+  padding-bottom: 10px;
 }
