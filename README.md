@@ -1,74 +1,66 @@
-# React Basic Template
+# RavenKod ᚱ
 
-A minimal React + TypeScript template with React Router, built with Vite.
+Sitio web de **RavenKod** — software a medida para web, móvil y desktop. _// forjadores del núcleo_
 
-## Features
+Landing page de una sola página con estética de forja nórdica: hero con ventana de código animada, servicios, proceso de trabajo, diferenciales, equipo y contacto.
 
-- **React 19** - Latest React with hooks
-- **TypeScript** - Type safety out of the box
-- **React Router v7** - Client-side routing
-- **Vite** - Fast development and building
-- **ESLint** - Code linting with React hooks rules
+## Stack
 
-## Getting Started
+- **React 19** + **TypeScript**
+- **Vite** — dev server y build
+- **React Router v7** — routing del lado del cliente
+- **lucide-react** — iconografía
+- **CSS plano** — un archivo de estilos por componente
+- **Bun** como package manager (también funciona con npm)
 
-This template uses **Bun** as the package manager by default.
+## Desarrollo
 
 ```bash
-# Install dependencies
+# Instalar dependencias
 bun install
 
-# Start development server
-npm run dev
+# Servidor de desarrollo
+bun run dev
 
-# Build for production
-npm run build
+# Build de producción (typecheck + bundle)
+bun run build
 
-# Preview production build
-npm run preview
+# Previsualizar el build
+bun run preview
 
-# Run linter
-npm run lint
+# Linter
+bun run lint
 ```
 
-## Project Structure
+## Estructura del proyecto
 
 ```
 src/
-├── App.tsx          # Main app component with routes
-├── main.tsx         # Entry point
-└── index.css        # Global styles
+├── main.tsx                 # Punto de entrada
+├── app.tsx                  # Rutas (/ y 404)
+└── index.css                # Estilos globales, variables y fuentes
 pages/
-├── index.tsx        # Pages entry
-└── Home/            # Example page component
-    ├── Home.tsx
-    └── Home.css
+├── home/                    # Página principal (arma todas las secciones)
+└── not-found/               # Página 404
+components/
+├── layouts/                 # MainLayout (navbar + contenido + footer)
+├── navegation/              # Navbar, sidebar y hamburguesa (mobile)
+├── sections/                # Hero, servicios, proceso, why-us, equipo y contacto
+├── service-card/            # Tarjeta de servicio
+├── process-card/            # Tarjeta de paso del proceso
+├── why-card/                # Tarjeta de diferencial
+├── team-card/               # Tarjeta de integrante del equipo
+├── divider/                 # Separador entre secciones
+├── section/                 # Contenedor base de sección
+└── footer/                  # Pie de página
+public/
+├── favicon.png
+└── icons.svg                # Sprite de íconos
 ```
 
-## Adding Tailwind CSS (Optional)
+## Rutas
 
-If you want to use Tailwind CSS:
-
-```bash
-# Install Tailwind and its dependencies
-npm install -D tailwindcss @tailwindcss/vite
-
-# Enable the plugin in vite.config.ts
-import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
-```
-
-Then add these directives to `src/index.css`:
-
-```css
-@import "tailwindcss";
-```
-
-## License
-
-MIT
+| Ruta  | Página                                                              |
+| ----- | ------------------------------------------------------------------- |
+| `/`   | Home: hero → servicios → proceso → why-us → equipo → contacto       |
+| `/*`  | Página 404                                                          |
