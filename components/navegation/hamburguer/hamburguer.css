@@ -8,7 +8,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  /* por encima del sidebar (45) para poder cerrarlo con la X */
+  /* sobre el sidebar (45) */
   z-index: 60;
 }
 

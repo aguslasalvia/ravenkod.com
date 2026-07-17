@@ -5,7 +5,6 @@
   max-width: 1180px;
 }
 
-/* Carrusel scrolleable en mobile: scroll-snap, sin JS */
 @media (max-width: 768px) {
   .team-grid {
     display: flex;

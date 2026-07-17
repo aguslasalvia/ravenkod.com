@@ -32,10 +32,7 @@ html {
   font-weight: 500;
 }
 
-/* --- Animaciones de carga --- */
-/* Usan `translate`/`opacity` (no `transform`) para no pisar
-   transforms propios de cada elemento (ej: la ventana rotada del hero) */
-
+/* translate en vez de transform: no pisa transforms propios de cada elemento */
 @keyframes load-rise {
   from {
     opacity: 0;
@@ -85,9 +82,6 @@ html {
 .load-delay-5 {
   animation-delay: .58s;
 }
-
-/* Reveal por scroll: las secciones (componente Section) arrancan ocultas
-   y animan sus bloques escalonados cuando entran al viewport */
 
 .reveal-section .section__content>* {
   opacity: 0;
@@ -141,8 +135,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* min-height (no height fija): con height 100dvh el #root quedaba
-   limitado a una pantalla y el header sticky se perdía al scrollear */
+/* min-height, no height: con altura fija el header sticky se pierde al scrollear */
 body {
   display: flex;
   justify-content: center;
@@ -152,7 +145,6 @@ body {
 
 }
 
-/* Grano de piedra: ruido SVG fijo sobre toda la página, casi imperceptible */
 body::after {
   content: "";
   position: fixed;

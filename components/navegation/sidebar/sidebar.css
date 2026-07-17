@@ -117,8 +117,7 @@
     background-color: var(--secondary-darker-color);
   }
 
-  /* el selector global `*` fija color en cada elemento; el icono debe
-     heredar el color oscuro del botón */
+  /* el selector global * pisa el color del svg */
   .sidebar__contact-btn svg {
     color: inherit;
   }

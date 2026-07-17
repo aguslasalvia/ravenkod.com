@@ -33,18 +33,20 @@ export default function HeroSection() {
             <span className="hero__window-dot" aria-hidden="true" />
             <span className="hero__window-dot" aria-hidden="true" />
             <span className="hero__window-dot" aria-hidden="true" />
-            <span className="hero__window-title">ravenkod.core</span>
+            <span className="hero__window-title">nucleo.saga — forja</span>
           </div>
           <pre className="hero__code">
             <code>
-              <span className="hero__code-comment">// núcleo — a medida</span>{"\n"}
-              <span className="hero__code-keyword">service</span> <span className="hero__code-string">"core"</span> {"{"}{"\n"}
-              {"  "}<span className="hero__code-prop">web</span> = <span className="hero__code-value">true</span>{"\n"}
-              {"  "}<span className="hero__code-prop">mobile</span> = <span className="hero__code-value">true</span>{"\n"}
+              <span className="hero__code-comment">// toda empresa tiene su saga</span>{"\n"}
+              <span className="hero__code-keyword">forjar</span> <span className="hero__code-string">"nucleo"</span> {"{"}{"\n"}
+              {"  "}<span className="hero__code-prop">web</span>     = <span className="hero__code-value">true</span>{"\n"}
+              {"  "}<span className="hero__code-prop">movil</span>   = <span className="hero__code-value">true</span>{"\n"}
               {"  "}<span className="hero__code-prop">desktop</span> = <span className="hero__code-value">true</span>{"\n"}
+              {"  "}<span className="hero__code-prop">temple</span>  = <span className="hero__code-value">eterno</span>{"\n"}
               {"}"}{"\n"}
               {"\n"}
-              <span className="hero__code-comment">build → deploy → sostener</span>
+              <span className="hero__code-comment"><span className="runic-font hero__code-rune">ᚨ</span> descubrir → <span className="runic-font hero__code-rune">ᚱ</span> diseñar → <span className="runic-font hero__code-rune">ᚦ</span> construir → <span className="runic-font hero__code-rune">ᚹ</span> sostener</span>
+              <span className="hero__code-cursor" aria-hidden="true">▍</span>
             </code>
           </pre>
         </div>

@@ -29,7 +29,6 @@
   color: var(--secondary-color);
 }
 
-/* al hover, cada link revela su runa */
 .navbar__links a[data-rune]::before {
   content: attr(data-rune);
   display: inline-block;
@@ -48,7 +47,6 @@
   margin-right: 7px;
 }
 
-/* sección activa (scrollspy): link dorado con su runa fija */
 .navbar__links a.navbar__link--active {
   color: var(--secondary-color);
 }

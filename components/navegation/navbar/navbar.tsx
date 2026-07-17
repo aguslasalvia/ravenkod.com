@@ -19,7 +19,6 @@ export default function Navbar() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        // el hero no tiene link: al volver arriba se limpia la selección
         if (entry.isIntersecting) setActive(entry.target.id === "hero" ? "" : entry.target.id)
       })
     }, { rootMargin: "-40% 0px -55% 0px" })

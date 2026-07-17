@@ -124,7 +124,7 @@
   background-color: var(--secondary-darker-color);
 }
 
-/* el selector global `*` fija color por elemento; el icono hereda el del botón */
+/* el selector global * pisa el color del svg */
 .footer__cta svg {
   color: inherit;
 }
