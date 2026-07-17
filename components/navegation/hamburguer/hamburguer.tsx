@@ -1,11 +1,21 @@
 import './hamburguer.css'
 
-export default function Hamburguer() {
+interface HamburguerProps {
+  open: boolean;
+  onClick: () => void;
+}
+
+export default function Hamburguer(props: HamburguerProps) {
   return (
-    <div className="hamburguer">
+    <button
+      className={`hamburguer${props.open ? ' hamburguer--open' : ''}`}
+      aria-label={props.open ? 'Cerrar menú' : 'Abrir menú'}
+      aria-expanded={props.open}
+      onClick={props.onClick}
+    >
       <span className="hamburguer__line"></span>
       <span className="hamburguer__line"></span>
       <span className="hamburguer__line"></span>
-    </div>
+    </button>
   )
 }

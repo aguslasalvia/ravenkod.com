@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Runic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Runic&family=Roboto+Slab:wght@700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root {
   --bg-color: #0e0f13;
@@ -16,9 +16,114 @@
   width: 100%;
 }
 
+::selection {
+  background: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-darker-color) var(--bg-color);
+}
+
 .runic-font {
   font-family: 'Noto Sans Runic', sans-serif;
   font-size: 20px;
+  font-weight: 500;
+}
+
+/* --- Animaciones de carga --- */
+/* Usan `translate`/`opacity` (no `transform`) para no pisar
+   transforms propios de cada elemento (ej: la ventana rotada del hero) */
+
+@keyframes load-rise {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes load-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.load-rise {
+  animation: load-rise .7s cubic-bezier(.22, .65, .3, 1) both;
+}
+
+.load-appear {
+  animation: load-appear 1s ease both;
+}
+
+.load-delay-1 {
+  animation-delay: .1s;
+}
+
+.load-delay-2 {
+  animation-delay: .22s;
+}
+
+.load-delay-3 {
+  animation-delay: .34s;
+}
+
+.load-delay-4 {
+  animation-delay: .46s;
+}
+
+.load-delay-5 {
+  animation-delay: .58s;
+}
+
+/* Reveal por scroll: las secciones (componente Section) arrancan ocultas
+   y animan sus bloques escalonados cuando entran al viewport */
+
+.reveal-section .section__content>* {
+  opacity: 0;
+}
+
+.reveal-section--visible .section__content>* {
+  animation: load-rise .7s cubic-bezier(.22, .65, .3, 1) both;
+}
+
+.reveal-section--visible .section__content>*:nth-child(2) {
+  animation-delay: .12s;
+}
+
+.reveal-section--visible .section__content>*:nth-child(3) {
+  animation-delay: .24s;
+}
+
+.reveal-section--visible .section__content>*:nth-child(4) {
+  animation-delay: .36s;
+}
+
+.reveal-section--visible .section__content>*:nth-child(5) {
+  animation-delay: .48s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .load-rise,
+  .load-appear,
+  .reveal-section--visible .section__content>* {
+    animation: none;
+  }
+
+  .reveal-section .section__content>* {
+    opacity: 1;
+  }
 }
 
 * {
@@ -30,19 +135,32 @@
 }
 
 html {
-  height: 100dvh;
   width: 100%;
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 
+/* min-height (no height fija): con height 100dvh el #root quedaba
+   limitado a una pantalla y el header sticky se perdía al scrollear */
 body {
   display: flex;
   justify-content: center;
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   background-color: var(--bg-color);
 
+}
+
+/* Grano de piedra: ruido SVG fijo sobre toda la página, casi imperceptible */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 header {

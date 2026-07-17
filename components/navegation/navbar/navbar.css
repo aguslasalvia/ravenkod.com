@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 1400px;
+  max-width: 1800px;
 }
 
 .navbar__links {
@@ -29,6 +29,36 @@
   color: var(--secondary-color);
 }
 
+/* al hover, cada link revela su runa */
+.navbar__links a[data-rune]::before {
+  content: attr(data-rune);
+  display: inline-block;
+  font-family: 'Noto Sans Runic', sans-serif;
+  color: var(--secondary-color);
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: max-width 0.25s ease, opacity 0.25s ease, margin-right 0.25s ease;
+}
+
+.navbar__links a[data-rune]:hover::before {
+  max-width: 1.2em;
+  opacity: 1;
+  margin-right: 7px;
+}
+
+/* sección activa (scrollspy): link dorado con su runa fija */
+.navbar__links a.navbar__link--active {
+  color: var(--secondary-color);
+}
+
+.navbar__links a.navbar__link--active::before {
+  max-width: 1.2em;
+  opacity: 1;
+  margin-right: 7px;
+}
+
 .navbar__contact-btn {
   font-size: 13px;
   padding: 0.6rem 1rem;
@@ -47,11 +77,16 @@
 .navbar__logo {
   display: flex;
   align-items: center;
+  gap: 2px;
+  font-size: 17px;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
-.navbar__logo span {
-  font-size: 30px !important;
-  color: var(--secondary-color);
+.navbar__logo-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
 }
 
 @media (max-width: 768px) {

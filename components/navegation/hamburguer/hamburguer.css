@@ -8,7 +8,8 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  /* por encima del sidebar (45) para poder cerrarlo con la X */
+  z-index: 60;
 }
 
 .hamburguer__line {
@@ -19,6 +20,19 @@
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
+}
+
+.hamburguer--open .hamburguer__line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburguer--open .hamburguer__line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(8px);
+}
+
+.hamburguer--open .hamburguer__line:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 @media (max-width: 768px) {

@@ -17,6 +17,7 @@ export default function TeamSection() {
     <Section
       id="team"
       badge="EQUIPO"
+      saga="IV"
       header="Las manos detrás del núcleo."
       subheader="// un clan chico, puro oficio"
     >

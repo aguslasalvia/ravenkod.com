@@ -31,6 +31,7 @@ export default function WhyUsSection() {
     <Section
       id="why"
       badge="POR QUÉ RAVENKOD"
+      saga="III"
       header="Oficio, no plantillas."
       subheader="// tallado, no fundido en molde"
     >

@@ -1,0 +1,62 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  min-height: calc(100dvh - 64px);
+  padding: 40px 24px;
+}
+
+.not-found__logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  margin-bottom: 6px;
+}
+
+.not-found__code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 4px;
+  color: var(--secondary-color);
+}
+
+.not-found__title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  max-width: 18ch;
+}
+
+.not-found__text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary-darker-color);
+  max-width: 44ch;
+}
+
+.not-found__tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--secondary-darker-color);
+}
+
+.not-found__cta {
+  margin-top: 14px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #f2f0eb;
+  color: var(--bg-color);
+  transition: background-color .3s ease;
+}
+
+.not-found__cta:hover {
+  background-color: var(--secondary-color);
+}

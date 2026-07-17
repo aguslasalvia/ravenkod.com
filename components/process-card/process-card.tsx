@@ -3,6 +3,7 @@ import "./process-card.css";
 interface ProcessCardProps {
   index: number,
   rune: string,
+  runeMeaning?: string,
   header: string,
   text: string
 
@@ -17,6 +18,9 @@ export default function ProcessCard(props: ProcessCardProps) {
       </div>
       <h3 className="process-card__header">{props.header}</h3>
       <p className="process-card__text">{props.text}</p>
+      {props.runeMeaning && (
+        <span className="process-card__rune-meaning">{props.runeMeaning}</span>
+      )}
     </article>
   )
 }

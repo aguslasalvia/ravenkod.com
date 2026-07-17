@@ -51,3 +51,12 @@
   color: var(--primary-darker-color);
   /* margin-top: 16px; */
 }
+
+.process-card__rune-meaning {
+  margin-top: auto;
+  padding-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--secondary-darker-color);
+}

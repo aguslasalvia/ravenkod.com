@@ -5,6 +5,24 @@
   max-width: 1180px;
 }
 
+/* Carrusel scrolleable en mobile: scroll-snap, sin JS */
+@media (max-width: 768px) {
+  .team-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 4px;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-darker-color) transparent;
+  }
+
+  .team-grid>* {
+    flex: 0 0 min(300px, 85%);
+    scroll-snap-align: center;
+  }
+}
+
 .guild-card {
   border: 1px dashed rgba(200, 162, 74, .35);
   border-radius: 22px;

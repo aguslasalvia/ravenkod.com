@@ -1,0 +1,123 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact__header {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  margin-top: 10px;
+}
+
+.contact__subheader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--secondary-darker-color);
+}
+
+.contact__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c2c0ba;
+  max-width: 40ch;
+  margin-top: 10px;
+}
+
+.contact__email-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.contact__email-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--primary-darker-color);
+}
+
+.contact__email {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+  width: fit-content;
+}
+
+.contact__email:hover {
+  color: var(--secondary-color);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  background-color: #121317;
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 22px;
+  padding: 44px 32px 36px;
+}
+
+.contact__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+  padding: 6px 2px 12px;
+  font-size: 15px;
+  color: var(--primary-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact__input::placeholder {
+  color: var(--primary-darker-color);
+}
+
+.contact__input:focus {
+  border-bottom-color: var(--secondary-color);
+}
+
+.contact__submit {
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__submit:hover {
+  background-color: var(--secondary-darker-color);
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact__header {
+    font-size: 29px;
+  }
+
+  .contact__form {
+    padding: 32px 22px 26px;
+  }
+}

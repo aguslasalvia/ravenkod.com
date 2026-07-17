@@ -14,6 +14,19 @@ section {
   max-width: 1680px;
 }
 
+.section__badge-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section__saga {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--secondary-darker-color);
+}
+
 .section__badge {
   font-family: 'Archivo', sans-serif;
   font-weight: 700;
@@ -43,18 +56,24 @@ section {
 
 
 .section__header-content {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 40px;
-  gap: 20px
+  gap: 12px;
 }
 
 
 @media (max-width: 768px) {
   .section__content {
-    margin: 20px 30px;
+    margin: 70px 24px;
   }
 
   .section__header {
     font-size: 29px;
+    width: 100%;
+  }
+
+  .section__subheader {
     width: 100%;
   }
 }
