@@ -1,15 +1,15 @@
 import "./team-section.css"
 
 import Section from "../section/section"
-import TeamCard from "../team-card/team-card"
+import TeamCard, { type TeamCardProps } from "../team-card/team-card"
 
-const team = [
+const team:TeamCardProps[] = [
   {
     name: "Agustin Lasalvia",
     role: "CO-FUNDADOR - BACKEND",
     rune: "ᚱ",
     bio: "Arquitectura y back-end. Obsesionado con sistemas que aguanten años.",
-    // photo:"/team/agustin-lasalvia.png"
+    photoPlaceholder:"/team/agustin-lasalvia.png"
   }
 ]
 
@@ -31,7 +31,7 @@ export default function TeamSection() {
               role={e.role}
               rune={e.rune}
               bio={e.bio}
-              photoPlaceholder={e.photo}
+              photoPlaceholder={e.photoPlaceholder}
 
             />
           )

@@ -1,6 +1,6 @@
 import "./team-card.css"
 
-interface TeamCardProps {
+export interface TeamCardProps {
   photoPlaceholder?: string;
   name: string;
   role: string;
