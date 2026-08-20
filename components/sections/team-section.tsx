@@ -8,7 +8,8 @@ const team = [
     name: "Agustin Lasalvia",
     role: "CO-FUNDADOR - BACKEND",
     rune: "ᚱ",
-    bio: "Arquitectura y back-end. Obsesionado con sistemas que aguanten años."
+    bio: "Arquitectura y back-end. Obsesionado con sistemas que aguanten años.",
+    // photo:"/team/agustin-lasalvia.png"
   }
 ]
 
@@ -30,6 +31,7 @@ export default function TeamSection() {
               role={e.role}
               rune={e.rune}
               bio={e.bio}
+              photoPlaceholder={e.photo}
 
             />
           )

@@ -12,7 +12,11 @@ export default function TeamCard(props: TeamCardProps) {
   return (
     <div className="team-card">
       <div className="team-card__photo">
-        <span>{props.photoPlaceholder || "foto fundador"}</span>
+        {
+          props.photoPlaceholder
+            ? <img src={props.photoPlaceholder} alt={props.name} />
+            : <span>{props.photoPlaceholder || "foto fundador"}</span>
+        }
       </div>
       <div className="team-card__body">
         <div className="team-card__header">
