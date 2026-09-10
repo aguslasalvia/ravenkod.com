@@ -32,6 +32,14 @@ html {
   font-weight: 500;
 }
 
+/* panel de vidrio: fondo translúcido + blur, reutilizado en tarjetas, paneles y la navbar */
+.glass-panel {
+  background-color: rgba(20, 21, 26, .55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(200, 162, 74, .14);
+}
+
 /* translate en vez de transform: no pisa transforms propios de cada elemento */
 @keyframes load-rise {
   from {
@@ -159,10 +167,14 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgba(255, 255, 255, .08);
-  background-color: #0f1013;
+  padding: 16px 20px 0;
+  pointer-events: none;
+}
 
+header>* {
+  pointer-events: auto;
 }

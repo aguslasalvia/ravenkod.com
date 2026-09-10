@@ -28,7 +28,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <form className="contact__form glass-panel" onSubmit={handleSubmit}>
           <input className="contact__input" name="name" type="text" placeholder="Nombre" required />
           <input className="contact__input" name="email" type="email" placeholder="Email" required />
           <input className="contact__input" name="company" type="text" placeholder="Empresa" />

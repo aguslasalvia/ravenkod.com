@@ -38,5 +38,9 @@
 @media (max-width: 768px) {
   .hamburguer {
     display: flex;
+    /* mismo lugar visual que ocupaba dentro de la navbar, pero fuera de su stacking context */
+    position: fixed;
+    top: 26px;
+    right: 36px;
   }
 }

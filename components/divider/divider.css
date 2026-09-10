@@ -19,13 +19,14 @@
   max-width: 1700px;
 }
 
-.divider__marker {
+.divider__mark {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 9px;
-  height: 9px;
-  background: var(--secondary-color);
-  transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: 0 0 0 5px var(--bg-color);
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  color: var(--secondary-color);
+  background: var(--bg-color);
+  padding: 0 10px;
+  line-height: 1;
 }

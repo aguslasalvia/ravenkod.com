@@ -5,7 +5,7 @@ export default function Divider() {
     <div className="divider__container">
 
       <div className="divider">
-        <span className="divider__marker" />
+        <span className="divider__mark runic-font" aria-hidden="true">ᛞ</span>
       </div>
     </div>
   )

@@ -3,8 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1800px;
+  padding: 0.6rem 0.7rem 0.6rem 1.4rem;
+  max-width: 1040px;
+  border-radius: 999px;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, .55);
 }
 
 .navbar__links {
@@ -59,11 +61,11 @@
 
 .navbar__contact-btn {
   font-size: 13px;
-  padding: 0.6rem 1rem;
+  padding: 0.55rem 1.1rem;
   background-color: var(--secondary-color);
   color: var(--bg-color) !important;
   border: none;
-  border-radius: 10px;
+  border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -90,5 +92,11 @@
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
+  }
+
+  /* radio más chico en mobile: evita que la curva de la cápsula "muerda" el botón hamburguesa */
+  .navbar {
+    padding-right: 1rem;
+    border-radius: 26px;
   }
 }

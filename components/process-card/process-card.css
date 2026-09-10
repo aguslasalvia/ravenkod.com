@@ -3,13 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 26px;
-  background-color: #0b0c0f;
-  border: 1px solid rgba(255, 255, 255, .08);
   transition: background-color .3s ease-in-out;
 }
 
 .process-card:hover {
-  background-color: #0e0f13;
+  background-color: rgba(30, 31, 38, .55);
 }
 
 .process-card__number-header {

@@ -1,3 +1,5 @@
+import { createPortal } from 'react-dom'
+
 import './hamburguer.css'
 
 interface HamburguerProps {
@@ -6,7 +8,7 @@ interface HamburguerProps {
 }
 
 export default function Hamburguer(props: HamburguerProps) {
-  return (
+  return createPortal(
     <button
       className={`hamburguer${props.open ? ' hamburguer--open' : ''}`}
       aria-label={props.open ? 'Cerrar menú' : 'Abrir menú'}
@@ -16,6 +18,7 @@ export default function Hamburguer(props: HamburguerProps) {
       <span className="hamburguer__line"></span>
       <span className="hamburguer__line"></span>
       <span className="hamburguer__line"></span>
-    </button>
+    </button>,
+    document.body
   )
 }

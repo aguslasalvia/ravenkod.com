@@ -1,4 +1,5 @@
 import { CalendarClock, ChevronRight, Hammer, Layers, Route, Users } from 'lucide-react'
+import { createPortal } from 'react-dom'
 
 import './sidebar.css'
 
@@ -15,7 +16,7 @@ const links = [
 ]
 
 export default function Sidebar(props: SidebarProps) {
-  return (
+  return createPortal(
     <>
       <div
         className={`sidebar__backdrop${props.open ? ' sidebar__backdrop--open' : ''}`}
@@ -45,6 +46,7 @@ export default function Sidebar(props: SidebarProps) {
           <span className="sidebar__tagline">// forjadores del núcleo</span>
         </div>
       </aside>
-    </>
+    </>,
+    document.body
   )
 }

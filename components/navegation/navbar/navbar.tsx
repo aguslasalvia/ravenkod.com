@@ -33,7 +33,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className="navbar">
+    <nav className="navbar glass-panel">
       <a className="navbar__logo" href="/#"><img className="navbar__logo-img" src="/favicon.png" alt="R" />avenkod</a>
       <ul className="navbar__links">
         {links.map((link) => (
