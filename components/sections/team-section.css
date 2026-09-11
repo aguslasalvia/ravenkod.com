@@ -41,12 +41,12 @@
 
 .guild-card__title {
   font: 700 20px/1.25 'Archivo', sans-serif;
-  color: #e8e6e1;
+  color: var(--primary-color);
   margin: 0;
 }
 
 .guild-card__text {
   font: 400 14px/1.6 'Archivo', sans-serif;
-  color: #9c9b98;
+  color: var(--primary-darker-color);
   margin: 0;
 }

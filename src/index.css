@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Runic&family=Roboto+Slab:wght@700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Runic&family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root {
-  --bg-color: #0e0f13;
+  --bg-color: #121110;
 
-  --primary-color: #e8e6e1;
-  --primary-darker-color: #88929e;
+  --primary-color: #ece5d8;
+  --primary-darker-color: #8f8778;
 
   --secondary-color: #c8a24a;
   --secondary-darker-color: #7d6a3f;
+
+  /* brasa: temperatura de interacción — hover/focus de elementos accionables, nunca en reposo */
+  --accent-color: #d3672f;
+}
+
+/* h1/h2 son el único lugar donde entra la display font: una encabezadora, no dos */
+h1,
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  letter-spacing: -0.01em;
 }
 
 
@@ -34,7 +43,7 @@ html {
 
 /* panel de vidrio: fondo translúcido + blur, reutilizado en tarjetas, paneles y la navbar */
 .glass-panel {
-  background-color: rgba(20, 21, 26, .55);
+  background-color: rgba(24, 21, 17, .55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(200, 162, 74, .14);
@@ -91,40 +100,11 @@ html {
   animation-delay: .58s;
 }
 
-.reveal-section .section__content>* {
-  opacity: 0;
-}
-
-.reveal-section--visible .section__content>* {
-  animation: load-rise .7s cubic-bezier(.22, .65, .3, 1) both;
-}
-
-.reveal-section--visible .section__content>*:nth-child(2) {
-  animation-delay: .12s;
-}
-
-.reveal-section--visible .section__content>*:nth-child(3) {
-  animation-delay: .24s;
-}
-
-.reveal-section--visible .section__content>*:nth-child(4) {
-  animation-delay: .36s;
-}
-
-.reveal-section--visible .section__content>*:nth-child(5) {
-  animation-delay: .48s;
-}
-
 @media (prefers-reduced-motion: reduce) {
 
   .load-rise,
-  .load-appear,
-  .reveal-section--visible .section__content>* {
+  .load-appear {
     animation: none;
-  }
-
-  .reveal-section .section__content>* {
-    opacity: 1;
   }
 }
 
@@ -173,6 +153,11 @@ header {
   z-index: 50;
   padding: 16px 20px 0;
   pointer-events: none;
+}
+
+/* el header no empuja al hero hacia abajo: se superpone para que el fondo de la forja llegue hasta arriba de todo */
+header:has(+ #hero) {
+  margin-bottom: -88px;
 }
 
 header>* {

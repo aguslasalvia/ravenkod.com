@@ -7,7 +7,7 @@ const processCards = [
   {
     rune: "ᚨ",
     runeMeaning: "Ansuz · la runa del conocimiento",
-    header: "Descubir",
+    header: "Descubrir",
     text: "Escuchamos tu operación y entendemos el problema real antes de escribir una línea."
   },
   {
@@ -33,10 +33,9 @@ export default function ProcessSection() {
   return (
     <Section
       id="process"
-      badge="PROCESO"
-      saga="II"
+      rune="ᛈ"
       header="De la idea al producto"
-      subheader="// de la niebla a la piedra"
+      subheader="De la niebla a la piedra."
     >
       <div className="process-section__grid">
         {processCards.map((card, index) => (

@@ -25,8 +25,7 @@ export default function ServiceSection() {
   return (
     <Section
       id="services"
-      badge="SERVICIOS"
-      saga="I"
+      rune="ᛋ"
       header="Un solo equipo para todo tu software."
     >
       <div className="service-section__grid">
@@ -35,7 +34,6 @@ export default function ServiceSection() {
             key={index}
             header={option.header}
             content={option.content}
-            index={index}
           />
         ))}
       </div>

@@ -12,26 +12,11 @@
   gap: 14px;
 }
 
-.contact__header {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
-  font-size: 44px;
-  margin-top: 10px;
-}
-
-.contact__subheader {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: var(--secondary-darker-color);
-}
-
 .contact__text {
   font-size: 16px;
   line-height: 1.6;
-  color: #c2c0ba;
+  color: #c2beb2;
   max-width: 40ch;
-  margin-top: 10px;
 }
 
 .contact__email-block {
@@ -102,7 +87,7 @@
 }
 
 .contact__submit:hover {
-  background-color: var(--secondary-darker-color);
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 900px) {

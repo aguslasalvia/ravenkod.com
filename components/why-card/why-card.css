@@ -1,14 +1,63 @@
+/* fila de manifiesto, no tarjeta: entra un renglón tallado en una lista, no una caja */
 .why-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 32px 26px;
-  gap: 10px;
-  background-color: var(--bg-color);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: start;
+  gap: 24px;
+  padding: 34px 4px;
+  border-top: 1px solid rgba(236, 229, 216, .1);
+  transition: border-color .3s ease;
+}
+
+.why-card:first-child {
+  border-top: 1px solid rgba(236, 229, 216, .1);
+}
+
+.why-card:last-child {
+  border-bottom: 1px solid rgba(236, 229, 216, .1);
+}
+
+.why-card:hover {
+  border-color: rgba(200, 162, 74, .5);
 }
 
 .why-card__rune {
+  font-size: 56px;
+  line-height: 1;
   color: var(--secondary-color);
-  font-size: 20px;
+  opacity: .8;
+}
+
+.why-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.why-card__header {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.why-card__text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary-darker-color);
+  max-width: 46ch;
+}
+
+@media (max-width: 600px) {
+  .why-card {
+    grid-template-columns: 60px 1fr;
+    padding: 26px 2px;
+  }
+
+  .why-card__rune {
+    font-size: 36px;
+  }
+
+  .why-card__header {
+    font-size: 20px;
+  }
 }

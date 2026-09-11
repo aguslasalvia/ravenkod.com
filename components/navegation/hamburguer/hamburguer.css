@@ -13,13 +13,34 @@
 }
 
 .hamburguer__line {
-  width: 1.8rem;
-  height: 0.2rem;
+  width: 29px;
+  /* en px, no rem: 0.2rem son 3.2px, y ese resto redondea distinto según el ancho de cada barra */
+  height: 3px;
   background: var(--secondary-color);
-  border-radius: 10px;
-  transition: all 0.3s linear;
+  border-radius: 0;
+  transition: width 0.25s ease, background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   position: relative;
   transform-origin: 1px;
+}
+
+/* en reposo, tres tablas de largo distinto en vez de tres líneas idénticas */
+.hamburguer__line:nth-child(1) {
+  width: 29px;
+}
+
+.hamburguer__line:nth-child(2) {
+  width: 20px;
+  margin-left: auto;
+}
+
+.hamburguer__line:nth-child(3) {
+  width: 24px;
+}
+
+/* al abrir, se emparejan en una X prolija y se calientan a color brasa */
+.hamburguer--open .hamburguer__line {
+  width: 29px;
+  background: var(--accent-color);
 }
 
 .hamburguer--open .hamburguer__line:nth-child(1) {

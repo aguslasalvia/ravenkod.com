@@ -12,18 +12,15 @@ export default function ContactSection() {
   }
 
   return (
-    <Section id="contact">
+    <Section id="contact" rune="ᚲ" header="Agendemos una llamada." subheader="Enviá tu señal, coordinamos el resto.">
       <div className="contact__grid">
         <div className="contact__info">
-          <span className="section__badge">CONTACTO</span>
-          <h2 className="contact__header">Agendemos una llamada.</h2>
-          <p className="contact__subheader">// enviá tu señal</p>
           <p className="contact__text">
             Contanos en qué estás pensando y coordinamos una
             llamada para conocer tu proyecto.
           </p>
           <div className="contact__email-block">
-            <span className="contact__email-label">O ESCRIBINOS A</span>
+            <span className="contact__email-label">O escribinos a</span>
             <a className="contact__email" href="mailto:hola@ravenkod.com">hola@ravenkod.com</a>
           </div>
         </div>

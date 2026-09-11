@@ -8,9 +8,11 @@ interface WhyCardProps {
 export default function WhyCard(props: WhyCardProps) {
   return (
     <div className="why-card">
-      <span className="why-card__rune rune-font">{props.rune}</span>
-      <h3 className="why-card__header">{props.header}</h3>
-      <p className="why-card__text">{props.text}</p>
+      <span className="why-card__rune runic-font" aria-hidden="true">{props.rune}</span>
+      <div className="why-card__body">
+        <h3 className="why-card__header">{props.header}</h3>
+        <p className="why-card__text">{props.text}</p>
+      </div>
     </div>
   )
 }

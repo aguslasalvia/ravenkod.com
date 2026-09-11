@@ -30,10 +30,9 @@ export default function WhyUsSection() {
   return (
     <Section
       id="why"
-      badge="POR QUÉ RAVENKOD"
-      saga="III"
+      rune="ᚦ"
       header="Oficio, no plantillas."
-      subheader="// tallado, no fundido en molde"
+      subheader="Tallado, no fundido en molde."
     >
       <div className="why-section__grid">
         {

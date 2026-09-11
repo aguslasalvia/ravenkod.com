@@ -17,10 +17,9 @@ export default function TeamSection() {
   return (
     <Section
       id="team"
-      badge="EQUIPO"
-      saga="IV"
+      rune="ᛖ"
       header="Las manos detrás del núcleo."
-      subheader="// un clan chico, puro oficio"
+      subheader="Un clan chico, puro oficio."
     >
       <div className="team-grid">
         {team.map((e, index) => {

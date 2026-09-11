@@ -18,9 +18,9 @@
 }
 
 .process-card__number {
-  font-family: "Archivo", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
   line-height: 40px;
   color: var(--secondary-color);
 }
