@@ -7,6 +7,10 @@
   max-width: 1040px;
   border-radius: 999px;
   border-color: rgba(200, 162, 74, .22);
+  /* más opacidad y blur que el glass-panel base: contra un fondo con brasas en movimiento, 55% quedaba lavado */
+  background-color: rgba(20, 17, 13, .82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   /* filo pulido: un brillo tenue apenas adentro del borde superior, como metal contra la luz */
   box-shadow:
     0 16px 40px -12px rgba(0, 0, 0, .55),
